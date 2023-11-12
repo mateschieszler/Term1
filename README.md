@@ -9,5 +9,8 @@
 ## Content
  The dataset consists of all information on the Formula 1 races, drivers, constructors, qualifying, circuits, lap times, pit stops, championships from 1950 till the latest 2023 season.
 
+The dataset contains 14 tables
+
 ## Acknowledgements
  The data is compiled from http://ergast.com/mrd/
+ Source of dataset: https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020
