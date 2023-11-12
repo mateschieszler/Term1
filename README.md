@@ -17,7 +17,7 @@ The dataset contains 14 tables
  Source of dataset: https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020
 
 # 2. Database
- 1. After downloading the 14 .csv files I created an EER diagram for the model `formula1_EER_diagram_231112.png` containing all tables and relations between them.
+ 1. After downloading the 14 .csv files I created an EER diagram for the model `00_formula1_EER_diagram_231112.png` containing all tables and relations between them.
  2. With Forward Engineer I created the schema and table structures. (The repo contains the `formula1_forward-engineer_11.08.sql` file for the purpose of showing the method, for the reproduction it is not neccessary.)
  3. With `LOAD DATA INFILE` I loaded the values from the .csv files. (The repo contains the `formula1_load-data_11.08.sql` file for the purpose of showing the method, for the reproduction it is not neccessary.)
 
@@ -46,17 +46,17 @@ For answering the three question three Views are created as Data Marts
 
 # 6. Reproduction
  The reproduction consist of loading three different files, For easier reproduction with data export a single data dump file was created to replace the forward engineer and load data infile step in the reproduction process:
-1. `formula1_dump_231112.sql` - Data dump.
+1. `01_formula1_dump_231112.sql` - Data dump.
  This file creates the schema and loads the data into the tables
-2. `formula1_analytical-layer_231112.sql` - Analytical layer
+2. `02_formula1_analytical-layer_231112.sql` - Analytical layer
  This file creates the analytical layer used for the analysis.
-3. `formula1_ETL_data-marts_231112.sql` - Datamarts
+3. `03_formula1_ETL_data-marts_231112.sql` - Datamarts
  This file creates the event and Data Marts
 
 Additional files:
-1. `formula1_EER_diagram_231112.png` shows the diagram of the database
-2. `formula1_forward-engineer_11.08.sql` shows the original creation of the schema and tables. 
-3. `formula1_load-data_11.08.sql` shows the my original method of loading the data from the .csv files. As an alternative this can be used instead of the data dump section. As some data cleaning was required is also included the prepared tables.
+1. `00_formula1_EER_diagram_231112.png` shows the diagram of the database
+2. `04_formula1_forward-engineer_11.08.sql` shows the original creation of the schema and tables. 
+3. `05_formula1_load-data_11.08.sql` shows the my original method of loading the data from the .csv files. As an alternative this can be used instead of the data dump section. As some data cleaning was required is also included the prepared tables.
 4. `formula1_csvs` the folder contains the files used for the creation of database
      
  
