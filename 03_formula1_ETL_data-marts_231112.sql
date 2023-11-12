@@ -30,6 +30,20 @@ DELIMITER ;
 
 SHOW EVENTS;
 
+-- Create trigger for updating the analytical table after insertion into results
+DROP TRIGGER IF EXISTS after_insert_results
+DELIMITER //
+CREATE TRIGGER after_insert_results
+AFTER INSERT ON results
+FOR EACH ROW
+BEGIN
+    -- Call the stored procedure to recreate the analytical table
+    CALL CreateRaceResultsStore();
+END;
+//
+DELIMITER ;
+
+SHOW TRIGGERS;
 
 -- Create view for answering the question "Who is the most experienced driver?"
 
