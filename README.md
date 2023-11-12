@@ -34,6 +34,7 @@ The aim of this analysis is to answer the following questions.
 The analytical layer consist of denormalized data from the following tables `circuits`, `races`, `results`, `drivers`, `constructors`, `status`. Beacause for answering our questions these tables contain enough data and for the puropse of not making processes slow the rest of the tables are not inculded.
 1. A stored procedure creates the analytical table (with the creation of analytical layer the simple `result_positionsGained` is created)
 2. An event refreshes the analytical table every week and logs the refreshes in log table.
+3. A trigger refreshes the analytical layer every time when a new row is entered into the results table
 
 # 5. ETL and Data Marts
 For answering the three question three Views are created as Data Marts
