@@ -18,8 +18,8 @@ The dataset contains 14 tables
 
 # 2. Database
  1. After downloading the 14 .csv files I created an EER diagram for the model `formula1_EER_diagram_231112.png` containing all tables and relations between them.
- 2. With Forward Engineer I created the schema and table structures.
- 3. With `LOAD DATA INFILE` I loaded the values from the .csv files. (The repo contains the `formula1_load-data_11.08.sql` file for the purpose of showing the method, for the reproduction it is not neccessary.
+ 2. With Forward Engineer I created the schema and table structures. (The repo contains the `formula1_forward-engineer_11.08.sql` file for the purpose of showing the method, for the reproduction it is not neccessary.)
+ 3. With `LOAD DATA INFILE` I loaded the values from the .csv files. (The repo contains the `formula1_load-data_11.08.sql` file for the purpose of showing the method, for the reproduction it is not neccessary.)
 
 # 3. Analytical plan
 The aim of this analysis is to answer the following questions.
@@ -44,6 +44,19 @@ For answering the three question three Views are created as Data Marts
 
 3. For answering the question, what was the most common reason for abandoning the race I selected the most frequent reason for each track. To give more sense to this simple status message I also included the count of reason, and their share among all the others for the given track.
 
-# 5. Reproduction of Database
+# 6. Reproduction
+ The reproduction consist of loading three different files, For easier reproduction with data export a single data dump file was created to replace the forward engineer and load data infile step in the reproduction process:
+1. `formula1_dump_231112.sql` - Data dump.
+ This file creates the schema and loads the data into the tables
+2. `formula1_analytical-layer_231112.sql` - Analytical layer
+ This file creates the analytical layer used for the analysis.
+3. `formula1_ETL_data-marts_231112.sql` - Datamarts
+ This file creates the event and Data Marts
+
+Additional files:
+1. `formula1_EER_diagram_231112.png` shows the diagram of the database
+2. `formula1_forward-engineer_11.08.sql` shows the original creation of the schema and tables. 
+3. `formula1_load-data_11.08.sql` shows the my original method of loading the data from the .csv files. As an alternative this can be used instead of the data dump section. As some data cleaning was required is also included the prepared tables.
+4. `formula1_csvs` the folder contains the files used for the creation of database
      
  
