@@ -18,7 +18,7 @@ The dataset contains 14 tables
 
 # 2. Database
  1. After downloading the 14 .csv files I created an EER diagram for the model `00_formula1_EER_diagram_231112.png` containing all tables and relations between them.
- 2. With Forward Engineer I created the schema and table structures. (The repo contains the `formula1_forward-engineer_11.08.sql` file for the purpose of showing the method, for the reproduction it is not neccessary.)
+ 2. With Forward Engineer I created the schema and table structures. (The repo contains the `04_formula1_forward-engineer_11.08.sql` file for the purpose of showing the method, for the reproduction it is not neccessary.)
  3. With `LOAD DATA INFILE` I loaded the values from the .csv files. (The repo contains the `formula1_load-data_11.08.sql` file for the purpose of showing the method, for the reproduction it is not neccessary.)
 
 # 3. Analytical plan
